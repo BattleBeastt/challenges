@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width ; initial-scale=1.0">
-<title>EnCR!PT@DOr de texto</title>
+<title>encript@dor de mensajes</title>
 <link rel="stylesheet" href="estilos.css">
 <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Spice&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header id="cabecera">
-			<div id="logo">
+			<div id="nombreYslogan">
 				<h1>El mejor Encriptador de mensajes</h1>
 				<p>consigue la privacidad que deseas</p>
 			</div>
@@ -21,27 +21,30 @@
 						<li>no se aceptan caracteres especiales</li>
 					</ul>
 			</div>
-	</header>
+	</header>                                               
 		<main id="contenido-principal">
-					<textarea class="texto-cifrado" name="cifrar" placeholder="INGRESE EL TEXTO AQUI....."></textarea>
-					<div class="boton">
-						<button type="submit" class="cifrar"  name="cifrar" >ENCRIPTAR</button>
-						<button type="submit" class="cifrar"  name="cifrar" >DESENCRIPTAR</button>
+					<textarea id="caja-text1" class="texto-cifrado" name="caja-text1" placeholder="escribe tu mensaje secreto aqui"></textarea>
+					<div class="botones">
+						<button class="bto-cifrar" id="encriptador" onclick="btoEncriptar();">ENCRIPTAR</button>
+						<button class="bto-cifrar" id="desencriptar" onclick= "btoDesencriptar();">DESENCRIPTAR</button>
 					</div>
 		</main>
 				<aside id="contenido-secundario">
-						<textarea class="texto-cifrado" name="cifrar"></textarea>
-					<div class="boton">
-						<button type="submit" class="bto-secundario" name="cifrar" >COPIAR</button>
-						<button type="submit" class="bto-secundario" name="cifrar" >BORRAR</button>
+						<img src="muñeco.png" alt="joven con lupa" id="img-buscando">
+						<img src="text1.png" alt="introduzca mensaje" id="img-mensaje">
+						<textarea id="caja-text2" class="mensaje texto-cifrado" name="caja-text2"></textarea>
+					<div class="botones">
+						<button id="copiar" class="bto-opcional" onclick="btoCopiar();">COPIAR</button>
+						<p id="miTexto"><i></i></p>
 					</div>
 				</aside>
 					<footer>
 						<address id="creador">
 							Michael Pazmino C.E.O.<br>
-							derechos reservados<br>
+							todos los derechos reservados y los zurdos tambien<br>
 							2024 - 2025 ®<br>
 						</address>
 					</footer>
+					<script defer src="animacion.js"></script>
 </body>
 </html>
