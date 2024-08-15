@@ -7,14 +7,14 @@
 sin que nadie mas los lea; esta es la version 1.0, en el futuro puede que agrege mas funciones, sin embargo las funciones de encriptar y desencriptar siempre estaran presentes</em></p>
 <h3 align="left">Demostracion de funciones</h3>
 <p>en esta version la pagina solo dispone de 3 funciones: <strong>encriptar, desencriptar y copiar</strong> tan sencillas que hasta un niño podria enviar sus mensajes secretos jejeje</p>
-<p><strong>Encriptar</strong></p>
+*<p><strong>Encriptar</strong></p>
 <p>esta funcion recoge el texto ingresado por el usuario, al hacer click en el boton "encriptar" el sistema recopila los datos ingresados, cambia sus caracteres para que sen ilegibles, y los proyecta
 en el siguiente recuadro de texto</p>
 <p><strong>Nota: </strong>no es posible ingresar letras en mayusculas ni tampoco numeros</p>
-<p><strong>Desencriptar</strong></p>
+*<p><strong>Desencriptar</strong></p>
 <p>esta funcion realiza todo lo contrario al cifrado del texto, al hacer click en el boton "desencriptar" el sistema recopila los datos del texto cifrado, los transforma en caracteres legibles para las personas 
  y los muestra en el siguiente recuadro de texto, ¡¡Y taran, ahora puedes leer el mensaje secreto!!</p>
- <p><strong>Copiar</strong></p>
+*<p><strong>Copiar</strong></p>
  <p>esta funcion tal como dice su nombre copia el texto que se muestra en el segundo textarea y lo guarda en el portapapeles del navegador, para que posteriormente lo puedas compartir o pegar donde quieras</p>
  <p><strong>Nota: </strong>saldrá un parrafo de "contenido copiado" cuando el texto se encuentre en el portapapeles</p>
  <h3 align="left">Aceso al proyecto</h3>
