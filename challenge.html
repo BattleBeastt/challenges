@@ -23,18 +23,18 @@
 			</div>
 	</header>                                               
 		<main id="contenido-principal">
-					<textarea id="caja-text1" class="texto-cifrado" name="caja-text1" placeholder="escribe tu mensaje secreto aqui"></textarea>
+					<textarea id="caja-text1" class="texto-cifrado" name="caja-text1" rows="15" placeholder="escribe tu mensaje secreto aqui"></textarea>
 					<div class="botones">
-						<button class="bto-cifrar" id="encriptador" onclick="btoEncriptar();">ENCRIPTAR</button>
-						<button class="bto-cifrar" id="desencriptar" onclick= "btoDesencriptar();">DESENCRIPTAR</button>
+						<button type="button" id="encriptador" class="bto-cifrar" onclick="btoEncriptar();">ENCRIPTAR</button>
+						<button type="button" id="desencriptar" class="bto-cifrar" onclick= "btoDesencriptar();">DESENCRIPTAR</button>
 					</div>
 		</main>
 				<aside id="contenido-secundario">
-						<img src="muñeco.png" alt="joven con lupa" id="img-buscando">
+						<img src="jovenbuscando.png" alt="joven con lupa" id="img-buscando">
 						<img src="text1.png" alt="introduzca mensaje" id="img-mensaje">
-						<textarea id="caja-text2" class="mensaje texto-cifrado" name="caja-text2"></textarea>
+						<textarea id="caja-text2" class="mensaje texto-cifrado" name="caja-text2" rows="15"></textarea>
 					<div class="botones">
-						<button id="copiar" class="bto-opcional" onclick="btoCopiar();">COPIAR</button>
+						<button type="button" id="copiar" class="bto-opcional" onclick="btoCopiar();">COPIAR</button>
 						<p id="miTexto"><i></i></p>
 					</div>
 				</aside>
