@@ -1,25 +1,30 @@
 let listaDeCompra = [];
-let categoria = ["lacteos", "embutidos", "frutas", "verduras"];
-let pregunta1 = prompt("¿deseas agregar un alimento a tu lista de compras?\n" + "SI\n" + "NO");
+let lacteos = [];
+let embutidos = [];
+let frutas = [];
+let verduras = [];
+let carnes = []
+let categoria = "";
 
-while(pregunta1 === "si"){
-	let pregunta2 = listaDeCompra.push(prompt("¿que alimento deseas agregar?"));
-	let pregunta3 = prompt("¿a qué categoria pertenence ese alimento?\n" + "lacteos\n" + "embutidos\n" + "frutas\n" + "verduras\n").value;
+let pregunta1 = prompt("¿deseas agregar un alimento a tu lista de compras?\n" + "si\n" + "no");
+
+while(pregunta1 != "no"){
 	
-	if(pregunta3){
-		let nuevaLista = categoria.push();
-	} else{
-		console.log("categoria no encontrada");
+	while(pregunta1 != "si" && pregunta1 != "no"){
+		alert("operacion no reconocida");
+	}
+	if(pregunta1 === "no"){
+		break;
+	}
+	let pregunta2 = listaDeCompra.push(prompt("¿que alimento deseas agregar?"));
+	let pregunta3 = prompt("¿a qué categoria pertenence ese alimento?");
+	if(pregunta3 == "lacteos"){
+		lacteos.push(pregunta2);
 	}
 	
-	pregunta1 = prompt("¿deseas agregar un alimento a tu lista de compras?\n" + "SI\n" + "NO");
+	
+	pregunta1 = prompt("¿deseas agregar un alimento a tu lista de compras?\n" + "si\n" + "no");
 }
 
 console.log(listaDeCompra);
-console.log("lista de compras: " + categoria);
-
-	// {categoria: "lacteos", alimento: " "},
-	// {categoria: "carnicos", alimento: " "},
-	// {categoria: "embutidos", alimento: " "},
-	// {categoria: "frutas", alimento: " "},
-	// {categoria: "verduras", alimento: " "}
+console.log("lista de compras: " + lacteos);
