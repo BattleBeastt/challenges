@@ -49,16 +49,15 @@ while(pregunta4 != "no"){
 		break;
 	}
 	eliminados = prompt("¿cuál alimento quieres aliminar?");
-	if(eliminados === listaDeCompra){
-		lacteos.pop();
+	let listaEliminados = listaDeCompra.includes(eliminados);
+	if(listaDeCompra){
+		let elementoEliminado = listaDeCompra.shift();
+		console.log("elementoEliminado");
+	} else{
+		console.log("alimento no encontrado");
 	}
+	
 	pregunta4 = prompt("¿quieres eliminar algun alimento de la lista?\n" + "si\n" + "no");
 }
 
 console.log(`lista de compras:\n lacteos:${lacteos}\n embutidos:${embutidos}\n frutas:${frutas}\n verduras:${verduras}\n carnes:${carnes}`);
-// if(listaDeCompra >= 1){
-	// listaDeCompra.includes(eliminados);
-	// listaDeCompra.pop(eliminados);
-	// } else{
-		// alert("no hay elementos en la lista");
-	// }
