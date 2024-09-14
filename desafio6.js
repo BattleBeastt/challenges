@@ -34,7 +34,7 @@ while(pregunta1 != "no"){
 	pregunta1 = prompt("¿deseas agregar un alimento a tu lista de compras?\n" + "si/no");
 }
 
-console.log(`lista de compras:\n lacteos:${lacteos}\n embutidos:${embutidos}\n frutas:${frutas}\n verduras:${verduras}\n carnes:${carnes}`);
+console.log(`lista de compras:\n lacteos: ${lacteos}\n embutidos: ${embutidos}\n frutas: ${frutas}\n verduras: ${verduras}\n carnes: ${carnes}`);
 
 //si el usuario quiere eliminar un elemento de la lista de compra//
 let pregunta4 = prompt("¿deseas eliminar algun alimento de la lista?\n" + "si/no");
@@ -46,23 +46,32 @@ while(pregunta4 != "no"){
 	if(pregunta4 === "no"){
 		break;
 	}
-	eliminados = prompt("¿cuál alimento quieres aliminar?");
-
+	eliminados = prompt(`¿cuál alimento quieres aliminar?\n  lacteos: ${lacteos}\n embutidos: ${embutidos}\n frutas: ${frutas}\n verduras: ${verduras}\n carnes: ${carnes}`);
+	
 	if(lacteos.includes(eliminados)){
-		lacteos.pop();
+		let index = lacteos.indexOf(eliminados);
+		lacteos.splice(index, 1);
+		alert(`el item ${eliminados} fue eliminado de la lista`)
 	} else if(embutidos.includes(eliminados)){
-		embutidos.pop();
+		let index = embutidos.indexOf(eliminados);
+		embutidos.splice(index, 1);
+		alert(`el item ${eliminados} fue eliminado de la lista`)
 	} else if(frutas.includes(eliminados)){
-		frutas.pop()
+		let index = frutas.indexOf(eliminados);
+		frutas.splice(index, 1);
+		alert(`el item ${eliminados} fue eliminado de la lista`)
 	} else if(verduras.includes(eliminados)){
-		verduras.pop();
+		let index = verduras.indexOf(eliminados);
+		verduras.splice(index, 1);
+		alert(`el item ${eliminados} fue eliminado de la lista`)
 	} else if(carnes.includes(eliminados)){
-		carnes.pop();
+		let index = carnes.indexOf(eliminados);
+		carnes.splice(index, 1);
+		alert(`el item ${eliminados} fue eliminado de la lista`)
 	} else{
-		alert("alimento no encontrado");
+		alert("alimento no fue encontrado");
 	}
 	
 	pregunta4 = prompt("¿deseas eliminar algun alimento de la lista?\n" + "si/no");
 }
-
-console.log(`lista de compras:\n lacteos:${lacteos}\n embutidos:${embutidos}\n frutas:${frutas}\n verduras:${verduras}\n carnes:${carnes}`);
+console.log(`lista de compras:\n lacteos: ${lacteos}\n embutidos: ${embutidos}\n frutas: ${frutas}\n verduras: ${verduras}\n carnes: ${carnes}`);
