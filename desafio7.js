@@ -1,31 +1,42 @@
-let operacion = prompt("elige la operacion a realizar: \n suma\n resta\n multiplicacion\n division\n salir");
-let valorUno = Math.floor(prompt("ingresa un valor: "));
-let valorDos = Math.floor(prompt("ingresa un valor: "));
+let operacion = prompt("elige cuál operacion realizar: \n suma\n resta\n multiplicacion\n division\n salir");
+let valorUno = 0;
+let valorDos = 0;
 let total = 0;
 
-while(operacion == "suma"  || operacion == "resta" || operacion == "multiplicacion" || operacion =="division" || operacion === "salir"){
+if(operacion != "suma" && operacion != "resta" && operacion != "multiplicacion" && operacion != "division" && operacion != "salir"){
+			alert("operacion no reconocida");
+			operacion = prompt("elige la operacion a realizar: \n suma\n resta\n multiplicacion\n division\n salir");
+		}
+while(operacion === "suma"  || operacion === "resta" || operacion === "multiplicacion" || operacion ==="division" || operacion === "salir"){
 		//en caso de que el valor de "operacion" no sea valido//
 		if(operacion === "salir"){
+			alert("!!hasta la próxima¡¡");
 			break;
 		}
-	switch(operacion == "suma" || operacion == "resta" || operacion == "multiplicacion" || operacion == "division"){
-		case "suma":
+		//el usuario elegio una operacion matematica//
+		valorUno = Math.floor(prompt("ingresa un valor: "));
+		valorDos = Math.floor(prompt("ingresa un valor: "));
+		//el interprete decidirá que operación ejecutar de acuerdo a lo que el usuario eligio//
+	switch(operacion){
+		case 'suma':
 			suma(valorUno, valorDos);
 			break;
-		case "resta":
+		case 'resta':
 			resta(valorUno, valorDos);
 			break;
-		case "multiplicacion":
+		case 'multiplicacion':
 			multiplicacion(valorUno, valorDos);
 			break;
-		case "division":
+		case 'division':
 			division(valorUno, valorDos);
 			break;
 		default:
 			alert("operacion no reconocida");
 	}
+	alert(`el resultado es: ${total}`);
 	operacion = prompt("elige la operacion a realizar: \n suma\n resta\n multiplicacion\n division\n salir");
 }
+
 function suma(valor1, valor2){
 	total = valor1 + valor2;
 	return total;
@@ -42,5 +53,3 @@ function division(valor1, valor2){
 	total = valor1 / valor2;
 	return total;
 }
-
-alert(`tu respuesta es: ${total}`);
